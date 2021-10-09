@@ -15,17 +15,16 @@ function App() {
   }));
 
   const showImg = <Chart
-  chartType="ScatterChart"
-  spreadSheetUrl="https://docs.google.com/spreadsheets/d/1jN0iw0usssnsG1_oi-NXtuKfsUsGme09GsFidbqxFYA/edit#gid=0"
+    width={'1000px'}
+  height={'800px'}
+  chartType="LineChart"
+  spreadSheetUrl="https://docs.google.com/spreadsheets/d/1Y3Cbr_p4F6TrIZIjdHaHcDI9u5LuyMUIBOlBmVLYc6Y/edit?usp=sharing"
   options={{
     hAxis: {
       format: 'short',
     },
     vAxis: {
-      format: 'decimal',
-      // format:'scientific'
-      // format:'long'
-      // format:'percent'
+       format: 'decimal',
     },
   }}
   rootProps={{ 'data-testid': '1' }}
@@ -35,24 +34,10 @@ function App() {
   return (
     <div className="App">
      <Grid container spacing={1}>
-         <Grid item sm={12} md={6} lg={4}>
+         <Grid item sm={12} md={8} lg={10}>
           <Item>{showImg}</Item>
         </Grid>
-         <Grid item sm={12} md={6} lg={4}>
-          <Item>{showImg}</Item>
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <Item>{showImg}</Item>
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <Item>{showImg}</Item>
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <Item>{showImg}</Item>
-        </Grid>
-        <Grid item sm={12} md={6} lg={4}>
-          <Item>{showImg}</Item>
-        </Grid>
+         
       
   
 </Grid>
