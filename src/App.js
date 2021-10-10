@@ -59,6 +59,12 @@ function App() {
         <Grid item  lg={12} xl={6}>
           <Item>{showImg("https://docs.google.com/spreadsheets/d/1F--Mw0JMRilA4hyQENiD9dkYt25efxAwWIn4ipefRww/edit?usp=sharing","Queuing tasks per user")}</Item>
         </Grid>
+        <Grid item  lg={12} xl={6}>
+          <Item>{showImg("https://docs.google.com/spreadsheets/d/1z5_FkSoOk9vhoFktOulf05baN69IAoi5x-ItQnfNaBI/edit?usp=sharing","R vs Q")}</Item>
+        </Grid>
+         <Grid item  lg={12} xl={6}>
+          <Item>{showImg("https://docs.google.com/spreadsheets/d/12Mt9Py47qsDVmK-h98uV0rNolzDPYY9WgalIF_l4g0c/edit?usp=sharing","R vs Q")}</Item>
+        </Grid>
   
 </Grid>
     </div>
