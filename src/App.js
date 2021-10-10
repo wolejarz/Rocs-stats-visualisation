@@ -40,8 +40,13 @@ function App() {
         <Grid item lg={12} xl={6}>
           <Button variant="outlined"><h2>Fram</h2></Button>
         </Grid>
+        <Grid item  lg={12} xl={6}>
+          <Item>{showImg("https://docs.google.com/spreadsheets/d/1ZL4Jv61ODAufPLiC-ssOy4Yqzq7jYbLi4tqXH1uHIO8/edit?usp=sharing","Cost per user")}</Item>
         </Grid>
-         
+        <Grid item  lg={12} xl={6}>
+          <Item>{showImg("https://docs.google.com/spreadsheets/d/1eDZ6E0fMx147tG-uEI2fymvSYbh_Uq58fqNoocmXnUo/edit?usp=sharing","Cost per user")}</Item>
+        </Grid>
+
       
   
 </Grid>
