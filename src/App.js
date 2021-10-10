@@ -10,19 +10,20 @@ function App() {
   
   const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
-  width: `800px`,
+    width: `800px`,
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
   }));
 
   const showImg = (url, title) => <Chart
-    width={'750px'}
-    height={'700px'}
+    width={'800px'}
+    height={'650px'}
     chartType="LineChart"
     spreadSheetUrl={url}
     options={{
-    title: `${title}`,
+      title: `${title}`,
+      chartArea: {'width': '70%', 'height': '80%'},
     vAxis: {
       format: 'decimal',
     },
