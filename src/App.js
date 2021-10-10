@@ -22,6 +22,7 @@ function App() {
     chartType="LineChart"
     spreadSheetUrl={url}
     options={{
+    title: `${title}`,
     vAxis: {
       format: 'decimal',
     },
@@ -32,9 +33,13 @@ function App() {
   
   return (
     <div className="App">
-     <Grid container spacing={1}>
-         <Grid item sm={12} md={8} lg={10}>
-          <Item>{showImg}</Item>
+      <Grid container spacing={1}>
+        <Grid item  lg={12} xl={6}>
+         <Button width="200" variant="outlined"><h2>Vilje</h2></Button>
+        </Grid>
+        <Grid item lg={12} xl={6}>
+          <Button variant="outlined"><h2>Fram</h2></Button>
+        </Grid>
         </Grid>
          
       
