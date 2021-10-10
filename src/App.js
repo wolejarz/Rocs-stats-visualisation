@@ -16,11 +16,11 @@ function App() {
   color: theme.palette.text.secondary,
   }));
 
-  const showImg = <Chart
-    width={'1000px'}
-  height={'800px'}
-  chartType="LineChart"
-  spreadSheetUrl="https://docs.google.com/spreadsheets/d/1Y3Cbr_p4F6TrIZIjdHaHcDI9u5LuyMUIBOlBmVLYc6Y/edit?usp=sharing"
+  const showImg = (url, title) => <Chart
+    width={'750px'}
+    height={'700px'}
+    chartType="LineChart"
+    spreadSheetUrl={url}
     options={{
     vAxis: {
       format: 'decimal',
