@@ -19,15 +19,9 @@ function App() {
   height={'800px'}
   chartType="LineChart"
   spreadSheetUrl="https://docs.google.com/spreadsheets/d/1Y3Cbr_p4F6TrIZIjdHaHcDI9u5LuyMUIBOlBmVLYc6Y/edit?usp=sharing"
-  options={{
-    hAxis: {
-      title: 'short',
-      textStyle: { fontSize: 12, color: '#999999' },
-      
-      format: 'short',
-    },
+    options={{
     vAxis: {
-       format: 'decimal',
+      format: 'decimal',
     },
   }}
   rootProps={{ 'data-testid': '1' }}
