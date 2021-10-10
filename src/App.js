@@ -47,7 +47,12 @@ function App() {
           <Item>{showImg("https://docs.google.com/spreadsheets/d/1eDZ6E0fMx147tG-uEI2fymvSYbh_Uq58fqNoocmXnUo/edit?usp=sharing","Cost per user")}</Item>
         </Grid>
 
-      
+        <Grid item  lg={12} xl={6}>
+          <Item>{showImg("https://docs.google.com/spreadsheets/d/13fzV3SpaDRSUNtol3zFI9g4uFQBtgghXx3bQiQXizP0/edit?usp=sharing","Running tasks per user")}</Item>
+        </Grid>
+        <Grid item  lg={12} xl={6}>
+          <Item>{showImg("https://docs.google.com/spreadsheets/d/11zsbU-pxub5AfNs00Gy3zkw6InI29-VD0Txy9WyYL7U/edit?usp=sharing","Running tasks per user")}</Item>
+        </Grid>
   
 </Grid>
     </div>
