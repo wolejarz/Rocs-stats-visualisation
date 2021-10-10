@@ -9,7 +9,8 @@ import Chart from "react-google-charts";
 function App() {
   
   const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
+    ...theme.typography.body2,
+  width: `800px`,
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
