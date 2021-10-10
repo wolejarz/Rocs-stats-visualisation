@@ -27,9 +27,7 @@ function App() {
       format: 'decimal',
     },
   }}
-  rootProps={{ 'data-testid': '1' }}
 />
-
   
   return (
     <div className="App">
