@@ -22,7 +22,7 @@ class LinearChart extends React.Component<IProps> {
       { type: "date", label: "Year" },
       { type: "number", label: "Debt" }
     ];
-    let rows = [];
+    let rows: any[] = [];
     const nonNullData = data;
 
     for (let row of nonNullData) {
