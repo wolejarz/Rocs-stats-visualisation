@@ -38,7 +38,7 @@ function App() {
          <Button width="200" variant="outlined"><h2>Vilje</h2></Button>
         </Grid>
         <Grid item  lg={12} xl={12}>
-          <Item>{showImg("https://docs.google.com/spreadsheets/d/1ZL4Jv61ODAufPLiC-ssOy4Yqzq7jYbLi4tqXH1uHIO8/edit?usp=sharing","Cost per user")}</Item>
+          <Item>{showImg("https://drive.google.com/file/d/1MS_oWTvPENSYzfFhf2sVRxH-h1NQZtJb/view?usp=sharing","Cost per user")}</Item>
         </Grid>
 </Grid>
     </div>
