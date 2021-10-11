@@ -7,20 +7,34 @@ interface IProps {
 
 class LinearChart extends React.Component<IProps> {
   state = { dataLoadingStatus: "loading", chartData: [] };
-  didMount = async function (component) {
-    const response = await fetch("https://api.exchangeratesapi.io/latest?symbols=USD,GBP,CAD");
+  async componentDidMount() {
+    const COUNTRY_CODE = "lb";
+    const INDICATOR = "DT.DOD.DECT.CD";
+    const response = await fetch(
+      "https://api.worldbank.org/v2/countries/" + COUNTRY_CODE + "/indicators/" + INDICATOR + "?format=json"
+    );
     const json = await response.json();
-    const rateCurrencyNames = Object.keys(json.rates);
-    const rateCurrencyValues: string[] = Object.values(json.rates);
-    const chartData = [["Currency Name", "Currency Rate"]];
-    for (let i = 0; i < rateCurrencyNames.length; i += 1) {
-      chartData.push([rateCurrencyNames[i], rateCurrencyValues[i]]);
+    const [metadata, data] = json;
+    {
+      /* console.log(data,metadata) */
+    }
+    const columns = [
+      { type: "date", label: "Year" },
+      { type: "number", label: "Debt" }
+    ];
+    let rows = [];
+    const nonNullData = data;
+
+    for (let row of nonNullData) {
+      const { date, value } = row;
+      rows.push([new Date(Date.parse(date)), value]);
     }
     this.setState({
-      dataLoadingStatus: "ready",
-      chartData: chartData
+      chartData: [columns, ...rows],
+      dataLoadingStatus: "ready"
     });
-  };
+  }
+
   render() {
     return this.state.dataLoadingStatus === "ready" ? (
       <Chart
