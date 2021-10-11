@@ -42,7 +42,7 @@ function App() {
          <Button width="200" variant="outlined"><h2>Vilje</h2></Button>
         </Grid>
         <Grid item  lg={12} xl={12}>
-          <Item>{showImg("ftp://localhost/vilje.hpc.ntnu.no.cost.csv")}</Item>
+          <Item>{showImg("http://localhost/vilje.hpc.ntnu.no.cost.csv")}</Item>
         </Grid>
 </Grid>
     </div>
