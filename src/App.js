@@ -11,6 +11,7 @@ function App() {
   const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     width: `1600px`,
+    margin: 'auto',
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
