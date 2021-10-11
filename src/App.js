@@ -4,6 +4,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Chart from "react-google-charts";
+import LinearChart from "./components/LinearChart";
 
 
 function App() {
@@ -17,19 +18,21 @@ function App() {
   color: theme.palette.text.secondary,
   }));
 
-  const showImg = (url, title) => <Chart
-    width={'1600px'}
-    height={'1000px'}
-    chartType="LineChart"
-    spreadSheetUrl={url}
-    options={{
-      title: `${title}`,
-      chartArea: {'width': '70%', 'height': '80%'},
-    vAxis: {
-      format: 'decimal',
-    },
-  }}
-/>
+  const showImg = (url, title) =>
+    <LinearChart url={url}/>
+//     <Chart
+//     width={'1600px'}
+//     height={'1000px'}
+//     chartType="LineChart"
+//     spreadSheetUrl={url}
+//     options={{
+//       title: `${title}`,
+//       chartArea: {'width': '70%', 'height': '80%'},
+//     vAxis: {
+//       format: 'decimal',
+//     },
+//   }}
+// />
   
   return (
     <div className="App">
