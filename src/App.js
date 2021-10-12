@@ -27,7 +27,16 @@ function App() {
          <Button width="200" variant="outlined"><h2>Vilje</h2></Button>
         </Grid>
         <Grid item  lg={12} xl={12}>
-          <Item>{showImg("http://localhost/vilje.hpc.ntnu.no.cost.csv")}</Item>
+          <Item>{showImg("http://localhost/vilje.hpc.ntnu.no.cost.csv","COST")}</Item>
+        </Grid>
+        <Grid item  lg={12} xl={12}>
+          <Item>{showImg("http://localhost/vilje.hpc.ntnu.no.running.csv","RUNNUNG")}</Item>
+        </Grid>
+        <Grid item  lg={12} xl={12}>
+          <Item>{showImg("http://localhost/vilje.hpc.ntnu.no.queuing.csv","QUEUING")}</Item>
+        </Grid>
+        <Grid item  lg={12} xl={12}>
+          <Item>{showImg("http://localhost/vilje.hpc.ntnu.no.summary.csv","SUMMARY")}</Item>
         </Grid>
 </Grid>
     </div>
