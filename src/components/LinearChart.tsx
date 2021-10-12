@@ -1,5 +1,6 @@
 import React from "react";
 import Chart from "react-google-charts";
+import { dataFromCSV } from "../utilities/Utilities";
 
 interface IProps {
   url: string;
@@ -8,25 +9,10 @@ interface IProps {
 class LinearChart extends React.Component<IProps> {
   state = { dataLoadingStatus: "loading", chartData: [] };
   async componentDidMount() {
-    const response = await fetch("https://api.worldbank.org/v2/countries/pl/indicators/NY.GDP.MKTP.CD/?format=json");
-    const json = await response.json();
-    const [metadata, data] = json;
-    {
-      /* console.log(data,metadata) */
-    }
-    const columns = [
-      { type: "date", label: "Year" },
-      { type: "number", label: "Debt" }
-    ];
-    let rows: any[] = [];
-    const nonNullData = data;
-
-    for (let row of nonNullData) {
-      const { date, value } = row;
-      rows.push([new Date(Date.parse(date)), value]);
-    }
+    const data = await dataFromCSV("http://localhost/vilje.hpc.ntnu.no.cost.csv");
+    console.log("data", data);
     this.setState({
-      chartData: [columns, ...rows],
+      chartData: data,
       dataLoadingStatus: "ready"
     });
   }
@@ -34,15 +20,14 @@ class LinearChart extends React.Component<IProps> {
   render() {
     return this.state.dataLoadingStatus === "ready" ? (
       <Chart
-        chartType="BarChart"
+        chartType="LineChart"
+        width={"1600px"}
+        height={"1000px"}
         data={this.state.chartData}
         options={{
-          chartArea: {
-            width: "50%"
-          },
-          title: "EUR Price"
+          chartArea: { width: "70%", height: "80%" },
+          title: "COST"
         }}
-        rootProps={{ "data-testid": "1" }}
       />
     ) : (
       <div>Fetching data from API</div>
