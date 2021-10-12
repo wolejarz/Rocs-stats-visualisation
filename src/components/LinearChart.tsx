@@ -1,5 +1,7 @@
 import React from "react";
 import Chart from "react-google-charts";
+import Paper from "@mui/material/Paper";
+
 import { dataFromCSV } from "../utilities/Utilities";
 
 interface IProps {
@@ -20,16 +22,26 @@ class LinearChart extends React.Component<IProps> {
 
   render() {
     return this.state.dataLoadingStatus === "ready" ? (
-      <Chart
-        chartType="LineChart"
-        width={"1200px"}
-        height={"800px"}
-        data={this.state.chartData}
-        options={{
-          chartArea: { width: "70%", height: "80%" },
-          title: `${this.props.title}`
-        }}
-      />
+      <div>
+        <Paper
+          elevation={5}
+          style={{
+            padding: 20,
+            width: "1200px"
+          }}
+        >
+          <Chart
+            chartType="LineChart"
+            width={"1200px"}
+            height={"800px"}
+            data={this.state.chartData}
+            options={{
+              chartArea: { width: "70%", height: "80%" },
+              title: `${this.props.title}`
+            }}
+          />
+        </Paper>
+      </div>
     ) : (
       <div>Fetching data from API</div>
     );
