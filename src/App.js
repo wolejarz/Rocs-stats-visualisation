@@ -19,20 +19,7 @@ function App() {
 
   const showImg = (url, title) =>
     <LinearChart url={url}/>
-//     <Chart
-//     width={'1600px'}
-//     height={'1000px'}
-//     chartType="LineChart"
-//     spreadSheetUrl={url}
-//     options={{
-//       title: `${title}`,
-//       chartArea: {'width': '70%', 'height': '80%'},
-//     vAxis: {
-//       format: 'decimal',
-//     },
-//   }}
-// />
-  dataFromCSV("");
+
   return (
     <div className="App">
       <Grid container spacing={1}>
