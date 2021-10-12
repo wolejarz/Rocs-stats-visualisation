@@ -10,7 +10,7 @@ function App() {
   
   const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
-    width: `1600px`,
+    width: `1200px`,
     margin: 'auto',
   padding: theme.spacing(1),
   textAlign: 'center',
@@ -18,7 +18,7 @@ function App() {
   }));
 
   const showImg = (url, title) =>
-    <LinearChart url={url}/>
+    <LinearChart url={url} title={title}/>
 
   return (
     <div className="App">

@@ -4,12 +4,13 @@ import { dataFromCSV } from "../utilities/Utilities";
 
 interface IProps {
   url: string;
+  title: string;
 }
 
 class LinearChart extends React.Component<IProps> {
   state = { dataLoadingStatus: "loading", chartData: [] };
   async componentDidMount() {
-    const data = await dataFromCSV("http://localhost/vilje.hpc.ntnu.no.cost.csv");
+    const data = await dataFromCSV(this.props.url);
     console.log("data", data);
     this.setState({
       chartData: data,
@@ -21,12 +22,12 @@ class LinearChart extends React.Component<IProps> {
     return this.state.dataLoadingStatus === "ready" ? (
       <Chart
         chartType="LineChart"
-        width={"1600px"}
-        height={"1000px"}
+        width={"1200px"}
+        height={"800px"}
         data={this.state.chartData}
         options={{
           chartArea: { width: "70%", height: "80%" },
-          title: "COST"
+          title: `${this.props.title}`
         }}
       />
     ) : (
