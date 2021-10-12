@@ -2,6 +2,8 @@ import './App.css';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import LinearChart from "./components/LinearChart";
+import PieChart from "./components/PieChart";
+
 
 function App() {
 
@@ -21,7 +23,7 @@ function App() {
           <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.queuing.csv"} title={"QUEUING"}/>
         </Grid>
         <Grid item lg={12} xl={12} align="center">
-          <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.summary.csv"} title={"SUMMARY"}/>
+          <PieChart url={"http://localhost/vilje.hpc.ntnu.no.summary.csv"} title={"SUMMARY"}/>
         </Grid>
       </Grid>
     </div>

@@ -26,7 +26,6 @@ class LinearChart extends React.Component<IProps> {
         <Paper
           elevation={5}
           style={{
-            padding: 20,
             width: "1200px"
           }}
         >
