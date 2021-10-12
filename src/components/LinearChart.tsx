@@ -8,11 +8,7 @@ interface IProps {
 class LinearChart extends React.Component<IProps> {
   state = { dataLoadingStatus: "loading", chartData: [] };
   async componentDidMount() {
-    const COUNTRY_CODE = "lb";
-    const INDICATOR = "DT.DOD.DECT.CD";
-    const response = await fetch(
-      "https://api.worldbank.org/v2/countries/" + COUNTRY_CODE + "/indicators/" + INDICATOR + "?format=json"
-    );
+    const response = await fetch("https://api.worldbank.org/v2/countries/pl/indicators/NY.GDP.MKTP.CD/?format=json");
     const json = await response.json();
     const [metadata, data] = json;
     {
