@@ -28,10 +28,10 @@ function App() {
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} centered>
-              <Tab label="COST PER USER"  />
-            <Tab label="RUNNING TASKS PER USER"  />
-            <Tab label="QUEUING TASKS PER USER"  />
-              <Tab label="R vs Q" />
+              <Tab label="COST PER USER" selected="tab-selected" sx={{ typography: 'body1', fontWeight:"bold"}}/>
+            <Tab label="RUNNING TASKS PER USER"  sx={{ typography: 'body1', fontWeight:"bold"}}/>
+            <Tab label="QUEUING TASKS PER USER"  sx={{ typography: 'body1', fontWeight:"bold"}}/>
+              <Tab label="R vs Q" sx={{ typography: 'body1', fontWeight:"bold"}}/>
           </Tabs>
         </Box>
       </Box>
