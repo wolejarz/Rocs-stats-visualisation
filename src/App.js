@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 
 import LinearChart from "./components/LinearChart";
 import PieChart from "./components/PieChart";
+import TabPanel from "./components/TabPanel";
 
 
 function App() {
@@ -24,9 +25,8 @@ function App() {
          <Button width="200" variant="outlined"><h2>Vilje</h2></Button>
         </Grid>
          
-
-      <Box sx={{ width: '100%' }}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Grid item  lg={12} xl={12} align="center">   
+        <Box sx={{ width: '100%', borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} centered>
               <Tab label="COST PER USER" sx={{ typography: 'body1', fontWeight:"bold"}}/>
             <Tab label="RUNNING TASKS PER USER"  sx={{ typography: 'body1', fontWeight:"bold"}}/>
@@ -34,28 +34,19 @@ function App() {
               <Tab label="R vs Q" sx={{ typography: 'body1', fontWeight:"bold"}}/>
           </Tabs>
         </Box>
-      </Box>
         <TabPanel value={value} index={0}>
           <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.cost.csv"}/>
         </TabPanel>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={1}>
           <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.running.csv"} />
         </TabPanel>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={2}>
           <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.queuing.csv"}/>
         </TabPanel>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={3}>
          <PieChart url={"http://localhost/vilje.hpc.ntnu.no.summary.csv"}/>
-        </TabPanel>
-       
-
-       
-
-       
-         
-        
-          
-      
+          </TabPanel>
+          </Grid>
       </Grid>
     </div>
   );
