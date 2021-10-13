@@ -30,7 +30,5 @@ export const dataFromCSV = async url => {
       })
     );
   });
-  console.log("Data and other values", values.data, typedData[0], typedData[1]);
-
   return typedData;
 };

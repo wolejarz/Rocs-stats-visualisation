@@ -13,7 +13,6 @@ class LinearChart extends React.Component<IProps> {
   state = { dataLoadingStatus: "loading", chartData: [] };
   async componentDidMount() {
     const data = await dataFromCSV(this.props.url);
-    console.log("data", data);
     this.setState({
       chartData: data,
       dataLoadingStatus: "ready"
