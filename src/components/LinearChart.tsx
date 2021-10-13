@@ -6,7 +6,6 @@ import { dataFromCSV } from "../utilities/Utilities";
 
 interface IProps {
   url: string;
-  title: string;
 }
 
 class LinearChart extends React.Component<IProps> {
@@ -34,8 +33,7 @@ class LinearChart extends React.Component<IProps> {
             height={"800px"}
             data={this.state.chartData}
             options={{
-              chartArea: { width: "70%", height: "80%" },
-              title: `${this.props.title}`
+              chartArea: { width: "70%", height: "80%" }
             }}
           />
         </Paper>
