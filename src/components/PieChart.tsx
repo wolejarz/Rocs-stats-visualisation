@@ -6,7 +6,6 @@ import { dataFromCSV } from "../utilities/Utilities";
 
 interface IProps {
   url: string;
-  title: string;
 }
 
 class PieChart extends React.Component<IProps> {
@@ -38,8 +37,7 @@ class PieChart extends React.Component<IProps> {
             ["Running", this.state.chartData[index][2]]
           ]}
           options={{
-            chartArea: { width: "70%", height: "80%" },
-            title: `${this.props.title}`
+            chartArea: { width: "70%", height: "80%" }
           }}
         />
       </Paper>
