@@ -28,22 +28,33 @@ function App() {
       <Box sx={{ width: '100%' }}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} centered>
-              <Tab label="COST PER USER" selected="tab-selected" sx={{ typography: 'body1', fontWeight:"bold"}}/>
+              <Tab label="COST PER USER" sx={{ typography: 'body1', fontWeight:"bold"}}/>
             <Tab label="RUNNING TASKS PER USER"  sx={{ typography: 'body1', fontWeight:"bold"}}/>
             <Tab label="QUEUING TASKS PER USER"  sx={{ typography: 'body1', fontWeight:"bold"}}/>
               <Tab label="R vs Q" sx={{ typography: 'body1', fontWeight:"bold"}}/>
           </Tabs>
         </Box>
       </Box>
-
-
-          <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.cost.csv"} title={"COST"}/>
+        <TabPanel value={value} index={0}>
+          <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.cost.csv"}/>
+        </TabPanel>
+        <TabPanel value={value} index={0}>
+          <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.running.csv"} />
+        </TabPanel>
+        <TabPanel value={value} index={0}>
+          <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.queuing.csv"}/>
+        </TabPanel>
+        <TabPanel value={value} index={0}>
+         <PieChart url={"http://localhost/vilje.hpc.ntnu.no.summary.csv"}/>
+        </TabPanel>
        
-          <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.running.csv"} title={"RUNNING"}/>
+
        
-          <LinearChart url={"http://localhost/vilje.hpc.ntnu.no.queuing.csv"} title={"QUEUING"}/>
+
+       
+         
         
-          <PieChart url={"http://localhost/vilje.hpc.ntnu.no.summary.csv"} title={"SUMMARY"}/>
+          
       
       </Grid>
     </div>
