@@ -24,12 +24,14 @@ class PieChart extends React.Component<IProps> {
       <Paper
         elevation={5}
         style={{
-          width: "1200px"
+          width: "1200px",
+          display: "flex",
+          flexDirection: "row"
         }}
       >
         <Chart
           chartType="PieChart"
-          width={"1200px"}
+          width={"900px"}
           height={"800px"}
           data={[
             ["Type", "Amount"],
@@ -40,6 +42,7 @@ class PieChart extends React.Component<IProps> {
             chartArea: { width: "70%", height: "80%" }
           }}
         />
+        AAAAA
       </Paper>
     ) : (
       <div>Fetching data from API</div>
