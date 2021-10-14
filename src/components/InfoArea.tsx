@@ -1,5 +1,7 @@
 import React from "react";
 import Paper from "@mui/material/Paper";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 class InfoArea extends React.Component {
   state = { dataLoadingStatus: "loading", infoData: "" };
@@ -18,10 +20,15 @@ class InfoArea extends React.Component {
         <Paper
           elevation={5}
           style={{
-            width: "1200px",
-            height: "500px"
+            width: "800px",
+            height: "500px",
+            overflow: "scroll",
+            marginTop: "20px",
+            textAlign: "left"
           }}
-        ></Paper>
+        >
+          <ReactMarkdown children={this.state.infoData} remarkPlugins={[remarkGfm]} />
+        </Paper>
       </div>
     ) : (
       <div>Fetching data from API</div>
