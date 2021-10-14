@@ -1,7 +1,6 @@
 import './App.css';
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
@@ -10,6 +9,7 @@ import Box from '@mui/material/Box';
 import LinearChart from "./components/LinearChart";
 import PieChart from "./components/PieChart";
 import TabPanel from "./components/TabPanel";
+import InfoArea from "./components/InfoArea";
 
 
 function App() {
@@ -23,11 +23,11 @@ function App() {
     <div className="App">
       <Grid container spacing={2} justify="center">
         <Grid item  lg={12} xl={12} align="center">
-         <Button width="200" variant="outlined"><h2>Vilje</h2></Button>
+         <InfoArea/>
         </Grid>     
       <Grid item  lg={12} xl={12} align="center">   
         <Box sx={{ width: '100%', borderBottom: 1, borderColor: 'divider' }}>
-          <Tabs classes={{ root: {backgroundColor: "#CCCFFF"} }} value={value} onChange={handleChange} centered>
+          <Tabs value={value} onChange={handleChange} centered>
               <Tab classes={{ indicator: {color: '#FFFFFF'} }} label="COST PER USER" sx={{ typography: 'body1', fontWeight:"bold"}}/>
               <Tab label="RUNNING TASKS PER USER"  sx={{ typography: 'body1', fontWeight:"bold"}}/>
               <Tab label="QUEUING TASKS PER USER"  sx={{ typography: 'body1', fontWeight:"bold"}}/>

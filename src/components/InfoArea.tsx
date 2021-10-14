@@ -18,7 +18,7 @@ class InfoArea extends React.Component {
         <Paper
           elevation={5}
           style={{
-            width: "600px",
+            width: "1200px",
             height: "500px"
           }}
         ></Paper>
