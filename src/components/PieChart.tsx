@@ -3,6 +3,7 @@ import Chart from "react-google-charts";
 import Paper from "@mui/material/Paper";
 
 import { dataFromCSV } from "../utilities/Utilities";
+import { Slider } from "@mui/material";
 
 interface IProps {
   url: string;
@@ -32,7 +33,7 @@ class PieChart extends React.Component<IProps> {
         <Chart
           chartType="PieChart"
           width={"900px"}
-          height={"800px"}
+          height={"600px"}
           data={[
             ["Type", "Amount"],
             ["Queuing", this.state.chartData[index][1]],
@@ -42,7 +43,18 @@ class PieChart extends React.Component<IProps> {
             chartArea: { width: "70%", height: "80%" }
           }}
         />
-        AAAAA
+        <div>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          DATE SELECTOR SLIDER
+          <br />
+          <br />
+          <br />
+          <Slider defaultValue={1} step={10} marks min={10} max={110} valueLabelDisplay="on" />
+        </div>
       </Paper>
     ) : (
       <div>Fetching data from API</div>
