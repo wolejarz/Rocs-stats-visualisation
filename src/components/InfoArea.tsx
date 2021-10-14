@@ -21,7 +21,7 @@ class InfoArea extends React.Component {
           elevation={5}
           style={{
             width: "800px",
-            height: "500px",
+            maxHeight: "500px",
             overflow: "scroll",
             marginTop: "20px",
             textAlign: "left"
