@@ -51,9 +51,11 @@ class PieChart extends React.Component<IProps> {
           <br />
           DATE SELECTOR SLIDER
           <br />
+          (max last 10 days)
           <br />
           <br />
-          <Slider defaultValue={1} step={10} marks min={10} max={110} valueLabelDisplay="on" />
+          <br />
+          <Slider defaultValue={1} step={10} marks min={10} max={100} valueLabelDisplay="on" />
         </div>
       </Paper>
     ) : (
