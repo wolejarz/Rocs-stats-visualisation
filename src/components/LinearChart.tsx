@@ -20,24 +20,22 @@ class LinearChart extends React.Component<IProps> {
 
   render() {
     return this.state.dataLoadingStatus === "ready" ? (
-      <div>
-        <Paper
-          elevation={5}
-          style={{
-            width: "1200px"
+      <Paper
+        elevation={5}
+        style={{
+          width: "1200px"
+        }}
+      >
+        <Chart
+          chartType="LineChart"
+          width={"1200px"}
+          height={"800px"}
+          data={this.state.chartData}
+          options={{
+            chartArea: { width: "70%", height: "80%" }
           }}
-        >
-          <Chart
-            chartType="LineChart"
-            width={"1200px"}
-            height={"800px"}
-            data={this.state.chartData}
-            options={{
-              chartArea: { width: "70%", height: "80%" }
-            }}
-          />
-        </Paper>
-      </div>
+        />
+      </Paper>
     ) : (
       <div>Fetching data from API</div>
     );
